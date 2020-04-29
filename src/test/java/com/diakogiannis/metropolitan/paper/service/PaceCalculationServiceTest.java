@@ -43,8 +43,8 @@ public class PaceCalculationServiceTest {
     @Test
     public void testCalculatePaceFormated() {
         PaceCalculationService instance = new PaceCalculationService();
-        String expResult = "5.5";
-        String result = instance.calculatePaceFormated(6000, 0, 33);
+        String expResult = "6";
+        String result = instance.calculatePaceFormated(5000, 1800000);
         assertEquals(expResult, result);
     }
 
@@ -54,8 +54,8 @@ public class PaceCalculationServiceTest {
     @Test
     public void testCalculatePace() {
         PaceCalculationService instance = new PaceCalculationService();
-        Double expResult = 5d;
-        Double result = instance.calculatePace(6000, 0, 30);
+        Double expResult = 6d;
+        Double result = instance.calculatePace(5000, 1800000);
         assertEquals(expResult, result);
     }
     
