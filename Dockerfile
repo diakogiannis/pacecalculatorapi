@@ -1,5 +1,5 @@
 FROM maven:3.6.0-jdk-11-slim AS build
-MAINTAINER Alexius Diakogiannis
+LABEL maintainer ="Alexius Diakogiannis"
 COPY . /usr/app/
 RUN mvn -f /usr/app/pom.xml clean package
 
