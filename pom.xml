@@ -60,12 +60,16 @@
       </dependency>
   </dependencies>
   <build>
+	<finalName>PaceCalculatorApp</finalName>
     <plugins>
       <plugin>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
         <version>${quarkus-plugin.version}</version>
-        <executions>
+        <configuration>
+	    <uberJar>true</uberJar>
+	</configuration>
+	<executions>
           <execution>
             <goals>
               <goal>build</goal>
