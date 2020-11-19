@@ -5,7 +5,7 @@ MAINTAINER Alexius Diakogiannis
 COPY . /usr/app/
 
 RUN mvn -f /usr/app/ clean package
-
+# Stage 2 : copy from the previous container the jar file, put it in a java one and run it
 FROM adoptopenjdk:11-jdk-openj9
 WORKDIR /app
 
